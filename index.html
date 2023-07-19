@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Personal Portfolio</title>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="images/logo.png"  class="logo" alt="">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#video">Lessons</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i id="bar" class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Web Developer</p>
+                <h1>Hi, I'm <span>Piyush</span><br>from India</h1>
+            </div>
+        </div>
+    </div>    
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-1">
+                    <img src="images/aboutmebg.png">
+                </div>
+                <div class="col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque expedita quas, delectus autem ex tempora eligendi molestias, accusamus provident porro, voluptatem neque optio aspernatur esse perspiciatis dicta quisquam! Culpa cupiditate praesentium numquam non iure autem consequatur aperiam earum. Vitae natus quos animi? Cupiditate?</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="openTab('skills')">Skills </p>
+                        <p class="tab-links" onclick="openTab('experience')">Experience </p>
+                        <p class="tab-links" onclick="openTab('education')">Education </p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ul>
+                            <li><span>Web Development</span><br>Frontend and Backend</li>
+                            <li><span>Android Development</span><br>Android App Development</li>
+                            <li><span>Machine Learning</span><br>Python</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ul>
+                            <li><span>2022-Current</span><br>Frontend and Backend</li>
+                            <li><span>2021-2022</span><br>Android App Development</li>
+                            <li><span>2020-2021</span><br>Python</li>
+                        </ul>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>2023</span><br>MIMIT</li>
+                            <li><span>2022</span><br>MIMIT</li>
+                            <li><span>2021</span><br>MIMIT</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="services">
+        <div class="container">
+            <h1 class="sub-title">Services</h1>
+            <div class="service-list">
+                <div>
+                    <i class="fa-solid fa-code"></i>
+                    <h2>Web Development</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus cupiditate quas quos. Laborum dolore vero quam. Ut minima veritatis, ullam aspernatur voluptatum nemo aperiam at nesciunt quaerat aut possimus voluptate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias officia necessitatibus eveniet rem cum rerum provident unde soluta, tenetur doloremque laudantium delectus itaque quis sequi architecto corporis repellat! Distinctio, veritatis?</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-app-store-ios"></i>
+                    <h2>Android Development</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus cupiditate quas quos. Laborum dolore vero quam. Ut minima veritatis, ullam aspernatur voluptatum nemo aperiam at nesciunt quaerat aut possimus voluptate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias officia necessitatibus eveniet rem cum rerum provident unde soluta, tenetur doloremque laudantium delectus itaque quis sequi architecto corporis repellat! Distinctio, veritatis?</p>
+                    <a href="#">Learn more</a>
+                </div>
+                <div>
+                    <i class="fa-brands fa-python"></i>
+                    <h2>Machine Learning</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus cupiditate quas quos. Laborum dolore vero quam. Ut minima veritatis, ullam aspernatur voluptatum nemo aperiam at nesciunt quaerat aut possimus voluptate? Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias officia necessitatibus eveniet rem cum rerum provident unde soluta, tenetur doloremque laudantium delectus itaque quis sequi architecto corporis repellat! Distinctio, veritatis?</p>
+                    <a href="#">Learn more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="sub-title">My Work</h1>
+            <div class="work-list">
+                <div class="work">
+                    <img src="images/work-2.jpg" alt="">
+                    <div class="layer">
+                        <h3>Web App</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis ad iusto laboriosam quasi dicta molestiae, vel, doloremque illo nihil maiores dolores a. Tempore!</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-4.jpg" alt="">
+                    <div class="layer">
+                        <h3>Social Media App</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis ad iusto laboriosam quasi dicta molestiae, vel, doloremque illo nihil maiores dolores a. Tempore!</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="images/work-3.avif" alt="">
+                    <div class="layer">
+                        <h3>Music App</h3>
+                        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reiciendis ad iusto laboriosam quasi dicta molestiae, vel, doloremque illo nihil maiores dolores a. Tempore!</p>
+                        <a href="#"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+
+    <div id="video">
+        <div class="container">
+            <h1 class="sub-title">My YT Videos</h1>
+            <div class="video-list">
+                    <div class="video">
+                        <h3>Introduction to Classes & Objects</h3>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/LjSAJKblz4g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>
+                    <div class="video">
+                        <h3>Introduction to Inheritance</h3>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/fu0r2nHlXLI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                    </div>               
+            </div>
+
+        </div>
+    </div>
+
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-regular fa-envelope"></i>CodeWithCodingLogics@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>7710411464</p>
+                    <div class="social-icons">
+                        <a target="_blank" href="https://github.com/thepiyushgoyal"><i class="fa-brands fa-github"></i></a>
+                        <a target="_blank" href="https://www.instagram.com/codinglogicss/"><i class="fa-brands fa-instagram"></i></a>
+                        <a target="_blank" href="https://twitter.com/piyushgoyall"><i class="fa-brands fa-twitter"></i></a>
+                        <a target="_blank" href="https://www.linkedin.com/in/piyushgoyal01"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                    <a href="" download class="btn btn2">Download CV</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" id="name" placeholder="Your Name" required>
+                        <input type="email" name="Email" id="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                    <span id="msg"></span>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p></p>copyright  &copy; Reserved By Piyush.
+        </div>
+    </div>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbyr6qMM8BupAyL6baEoXliAyp93XM3QuFmL0jRWMpu1N5GxNokElHcecyb_3c3Dw18zRQ/exec'
+        const form = document.forms['submit-to-google-sheet']
+        const msg = document.getElementById('msg')
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+            .then(response => {
+                msg.innerHTML = "Message sent Successfully"
+                setTimeout(function(){
+                    msg.innerHTML = "";
+                },5000)
+                form.reset()
+            })
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+    <script src="https://kit.fontawesome.com/7cb715e351.js" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+</html>

@@ -31,13 +31,28 @@ nav {
   align-items: center;
   justify-content: space-between;
   flex-wrap: wrap;
-  /* margin-top: -20px; */
 }
 nav ul li {
-  /* display: inline-block; */
   list-style: none;
-  margin: -30px 20px 0;
-  /* padding: 0 0 30px; */
+  margin: 10px 20px 0;
+}
+nav ul button{
+  width: 130px;
+  height: 50px;
+  background: transparent;
+  border: 2px solid white;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  color: white;
+  font-weight: 500;
+  margin-left: 20px;
+  transition: .5s;
+}
+nav ul button:hover{
+  background: #ff004f;
+  border: 2px solid #ff004f;
 }
 nav ul {
   display: flex;
@@ -73,6 +88,120 @@ nav ul li a:hover::after {
 
 .header-text h1 span {
   color: #ff004f;
+}
+
+/* wrapper */
+.wrapper{
+  z-index: 3;
+  position: absolute;
+  top: 20%;
+  left: 10%;
+  width: 500px;
+  height: 540px;
+  background: transparent;
+  border: 2px solid rgba(255,255,255,.5);
+  border-radius: 20px;
+  backdrop-filter: blur(100px);
+  box-shadow: 0 0 30px rgba(0,0,0,.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transform: scale(0);
+  transition: transform .5s ease;
+}
+.wrapper .subscribe-box{
+  /* background: red; */
+  width: 100%;
+  padding: 40px;
+}
+.subscribe-box h2{
+  font-size: 2em;
+  color: #fff;
+  text-align: center;
+}
+.subscribe-input-box{
+  position: relative;
+  width: 100%;
+  height: 50px;
+  border-bottom: 2px solid white;
+  margin: 30px 0;
+}
+.subscribe-input-box label{
+  position: absolute;
+  top: 50%;
+  left: 16px;
+  transform:translateY(-50%) ;
+  font-size: 1em;
+  font-weight: 500;
+  pointer-events: none;
+  transition: .5s;
+}
+
+.subscribe-input-box input{
+  width: 100%;
+  height: 100%;
+  margin-top: -1px;
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 1em;
+  font-weight: 600;
+  padding: 0 40px 0 5px;
+}
+.subscribe-input-box input:focus~label,
+.subscribe-input-box input:valid~label{
+  top: -5px;
+}
+.subscribe-input-box .subscribe-icon{
+  position: absolute;
+  right: 8px;
+  font-size: 1.2em;
+  line-height: 57px;
+  color: #ff004f;
+}
+.notification{
+  font-size: .9em;
+  font-weight: 500;
+  margin: -15px 0 15px;
+  /* display: flex; */
+
+}
+.notification label input{
+  margin-right: 7px;
+  width: fit-content;
+  accent-color: grey;
+}
+.subscribe-submit{
+  background: #ff004f;
+  margin: 0;
+  width: 100%;
+  height: 45px;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1em;
+  color: white;
+  font-weight: 500;
+}
+.wrapper .icon-close{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 45px;
+  height: 45px;
+  font-size: 2em;
+  background: #ff004f;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom-left-radius: 20px;
+  cursor: pointer;
+  z-index: 1;
+}
+.wrapper.active-popup{
+  transform: scale(1);
 }
 
 /* about me */
@@ -427,5 +556,12 @@ nav .fas {
   }
   .video iframe{
     width: 100%;
+  }
+  .wrapper{
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 400px;
+    height: 440px;
   }
 }

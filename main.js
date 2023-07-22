@@ -19,3 +19,13 @@ function openmenu(){
 function closemenu(){
   sideMenu.style.right = "-200px";
 }
+/......................................../ 
+const subscribe = document.querySelector(".login-btn")
+const iconClose = document.querySelector(".icon-close")
+const wrapper = document.querySelector(".wrapper")
+subscribe.addEventListener('click',()=>{
+  wrapper.classList.add('active-popup')
+})
+iconClose.addEventListener('click',()=>{
+  wrapper.classList.remove('active-popup')
+})

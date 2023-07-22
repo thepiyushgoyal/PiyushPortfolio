@@ -18,7 +18,7 @@
                     <li><a href="#portfolio">My work</a></li>
                     <li><a href="#video">Lessons</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <button class="login-btn">Subscribe</button>
+                    <button type="submit" class="login-btn">Subscribe</button>
                     <i class="fas fa-times" onclick="closemenu()"></i>
                 </ul>
                 <i id="bar" class="fas fa-bars" onclick="openmenu()"></i>
@@ -33,15 +33,15 @@
             <span class="icon-close"><i class="fa-solid fa-xmark"></i></span>
             <div class="subscribe-box login">
                 <h2>Subscribe</h2>
-                <form action="#">
+                <form name="submit-to-google-sheet-2">
                     <div class="subscribe-input-box">
                         <span class="subscribe-icon"><i class="fa-solid fa-envelope"></i></span>
-                        <input type="email" required>
+                        <input name="Email" type="email" required>
                         <label>Email</label>
                     </div>
                     <div class="subscribe-input-box">
                         <span class="subscribe-icon"><i class="fa-solid fa-lock"></i></span>
-                        <input type="password" required>
+                        <input name="Password" type="password" required>
                         <label>Password</label>
                     </div>
                     <div class="notification">
@@ -220,6 +220,19 @@
         })
       </script>
     <script src="https://kit.fontawesome.com/7cb715e351.js" crossorigin="anonymous"></script>
+    <!-- subscribe form  -->
+    <script>
+        const scriptURL2 = 'https://script.google.com/macros/s/AKfycbzaMrAn5BCXt9hxOa2T3fGdQDHwXtnQKebnUy8-ur3rEx5UqUcM6t0-YYpFWQGGXCKgFw/exec'
+        const form2 = document.forms['submit-to-google-sheet-2']
+      
+        form.addEventListener('submit', e => {
+          e.preventDefault()
+          fetch(scriptURL2, { method: 'POST', body: new FormData(form2)})
+            .then(response => console.log('Success!', response))
+            .catch(error => console.error('Error!', error.message))
+        })
+      </script>
+
     <script src="main.js"></script>
 </body>
 </html>
